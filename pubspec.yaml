@@ -50,7 +50,7 @@ flutter:
     - assets/google_fonts/
     - assets/google_play_img.png
     - assets/in_mind_logo_with_background.png
-    - assets/in_mind_logo_with.png
+    - assets/in_mind_logo.png
 
 
 animated_native_splash:
