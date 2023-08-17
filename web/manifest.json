@@ -1,11 +1,11 @@
 {
-    "name": "test_web",
-    "short_name": "test_web",
+    "name": "web-app-folio",
+    "short_name": "web-app-folio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
