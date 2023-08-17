@@ -197,7 +197,7 @@ class _InMindAppCard extends StatelessWidget {
                               width: 50,
                               height: 50,
                               child: Image.asset(
-                                  'in_mind_logo_with_background.png'))),
+                                  'assets/in_mind_logo_with_background.png'))),
                     ),
                     SizedBox(
                       width: 10,
@@ -221,7 +221,7 @@ class _InMindAppCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: SizedBox(
-                    width: 150, child: Image.asset('google_play_img.png')),
+                    width: 150, child: Image.asset(assets/google_play_img.png')),
               )
             ],
           ),
