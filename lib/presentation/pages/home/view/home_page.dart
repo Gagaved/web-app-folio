@@ -18,15 +18,15 @@ class HomePage extends StatelessWidget {
             Theme.of(context).colorScheme.secondary,
           ],
         )),
-        child: SingleChildScrollView(
+        child: const SingleChildScrollView(
           child: Column(
             children: [
-              const _TopBar(),
+              _TopBar(),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                padding: EdgeInsets.symmetric(vertical: 10.0),
                 child: AdaptiveProfileCard(),
               ),
-              const _AppsList()
+              _AppsList()
             ],
           ),
         ),
@@ -44,7 +44,7 @@ class _TopBar extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       color: Colors.black12,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50),
+        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -62,6 +62,8 @@ class _TopBar extends StatelessWidget {
 }
 
 class AdaptiveProfileCard extends StatelessWidget {
+  const AdaptiveProfileCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -146,7 +148,7 @@ class _AppsList extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineLarge,
           ),
         ),
-        _InMindAppCard(),
+        const _InMindAppCard(),
       ],
     );
   }
@@ -171,7 +173,7 @@ class _InMindAppCard extends StatelessWidget {
     if (screenWidth < 600 || screenHeight < 200) {
       logoSize = minAvatarSize;
       descriptionIsVisible = false;
-      width = 200;
+      //width = 300;
     } else {
       logoSize = maxAvatarSize;
     }
@@ -188,7 +190,7 @@ class _InMindAppCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -202,7 +204,7 @@ class _InMindAppCard extends StatelessWidget {
                               child: Image.asset(
                                   'assets/in_mind_logo_with_background.png'))),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Text(
@@ -213,7 +215,7 @@ class _InMindAppCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
                 child: Text(
                   "InMind! is an app for practicing mental calculations, designed to enhance mathematical thinking skills. It offers tasks of varying difficulty, timed practice options, and error analysis for more effective learning.",
                   textAlign: TextAlign.justify,
