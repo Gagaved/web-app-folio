@@ -22,7 +22,10 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               const _TopBar(),
-              AdaptiveProfileCard(),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: AdaptiveProfileCard(),
+              ),
               const _AppsList()
             ],
           ),
