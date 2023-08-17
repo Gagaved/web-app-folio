@@ -96,7 +96,7 @@ class AdaptiveProfileCard extends StatelessWidget {
               height: avatarSize,
               decoration: const BoxDecoration(
                 boxShadow: [BoxShadow(color: Colors.black26,offset: Offset(1, 1),blurRadius: 5,spreadRadius: 5)],
-                image: DecorationImage(image: AssetImage("avatar.png")),
+                image: DecorationImage(image: AssetImage("assets/avatar.png")),
                 shape: BoxShape.circle,
               ),
             ),
@@ -130,7 +130,7 @@ class AdaptiveProfileCard extends StatelessWidget {
 }
 
 class _AppsList extends StatelessWidget {
-  const _AppsList({super.key});
+  const _AppsList();
 
   @override
   Widget build(BuildContext context) {
@@ -150,7 +150,7 @@ class _AppsList extends StatelessWidget {
 }
 
 class _InMindAppCard extends StatelessWidget {
-  const _InMindAppCard({super.key});
+  const _InMindAppCard();
 
   @override
   Widget build(BuildContext context) {
@@ -221,7 +221,7 @@ class _InMindAppCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: SizedBox(
-                    width: 150, child: Image.asset(assets/google_play_img.png')),
+                    width: 150, child: Image.asset('assets/google_play_img.png')),
               )
             ],
           ),
