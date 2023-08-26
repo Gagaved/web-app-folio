@@ -1,0 +1,56 @@
+**Terms of Use for the "InMind!" Mobile App**
+
+These terms of use for the mobile application "InMind!" constitute an Agreement for the use of the mobile application "InMind!" (hereinafter referred to as the "Agreement") between the rights holder (hereinafter referred to as the "Rights Holder") of the mobile application "InMind!" (hereinafter referred to as the "Application"), presented in the AppStore (controlled by Apple Inc. and/or its affiliated entities) and/or Google Play (controlled by Google Inc. and/or its affiliated entities), and the end-user (individual who downloads the Application onto their mobile device, hereinafter referred to as "User" or "You/Your").
+Before using any Application, please review the terms of this Agreement. By downloading or installing the Application on your mobile device, you fully and unconditionally accept the terms of this Agreement. If you do not accept the terms of this Agreement in full, you are not authorized to use the Application for any purpose. To avoid any doubts, if you have downloaded the Application but subsequently refuse the terms of this Agreement, you must promptly delete the downloaded Application from your device (refusal of this Agreement is only possible by deleting the Application from your mobile device).
+
+1. General Concepts and Provisions
+1.1. "Rights Holder" - an individual, Ignat Morozov, who holds the property right to use and dispose of the mobile application "InMind!," which has placed the specified application in mobile app stores in accordance with the App Placement Terms and App Placement Rules in app stores. The contact address for communication and submission of suggestions and remarks regarding the Application is provided below.
+1.2. "User" - an individual who downloads the Application to their mobile device and further utilizes it.
+1.3. "Application" - the mobile application "InMind!," a collection of integrated information (program) within a software shell, designed to be installed (downloaded) on the User's mobile device, providing the User with the ability to view/read text, photo images, and perform other actions on their mobile device.
+1.4. The use of the Application is allowed only under the terms of this Agreement. If the User does not accept the terms of the Agreement in full, the User has no right to use the Application for any purpose. Using the Application in violation (non-compliance) with any of the terms of the Agreement is prohibited.
+1.5. By using the Application, the User agrees that the following documents are an integral part of this Agreement, and the terms of these documents fully apply to the use of the Application (the User unconditionally agrees to these documents by downloading the Application with the mentioned documents):
+1.5.1. Terms and Conditions for the use of products by Apple Inc./Google Inc., posted on the Internet at the respective links:
+https://www.apple.com/legal/internet-services/itunes/ww/ - for Apple Inc.
+https://policies.google.com/terms?hl=en - for Google Inc.
+1.5.2. "Privacy Policy and Personal Data Protection for Users of the mobile application 'Find Differences: Prison Escape'" - posted on the Internet at the following address:
+(Note: The address was not provided in the original text.)
+NOTE: If the User is under the age of 18 (eighteen) years, the User must review this Agreement together with their parent or legal representative to understand its terms. You also agree that any mentioned document can be amended without any special notice, and the new version of the documents becomes effective from the moment of their publication, unless otherwise provided by the editorial team of such document.
+
+2. License
+2.1. The Rights Holder, under the terms of a simple (non-exclusive) license, grants the User an non-transferable right to use the Application within the territory of all countries of the world, by employing the Application for its direct functional purpose. For this purpose, the User is granted the right to make copies of it and install (reproduce) it on the User's mobile device.
+
+3. Restrictions on the Use of the Application
+3.1. Except for usage in volumes and ways directly provided by this Agreement, the User is not entitled to modify, decompile, disassemble, decrypt, and perform other actions with the object code and source text of the Application, with the aim of obtaining information about the implementation of algorithms used in the Application. The User is also prohibited from creating derivative works using the Application, as well as performing (permitting the performance of) any other use of the Application, any components of the Application, images, and other data stored by the Application on the User's mobile device, without the written consent of the Application's Rights Holder.
+3.2. The User is not entitled to reproduce and distribute the Application for commercial purposes (including for a fee), including as part of collections of software products, without the written consent of the Application's Rights Holder.
+3.3. The User is not entitled to distribute the Application in a form different from the one in which they received it, without the written consent of the Application's Rights Holder.
+
+4. Specifics of Application Usage
+4.1. The functions of the Application cannot be performed (are restricted) in the absence of access to the Internet.
+4.2. The Rights Holder is not responsible in the event of failures during the download of the Application onto the User's mobile device.
+4.3. The User independently bears all expenses related to the Internet connection, the User's mobile device used to access the Internet and utilize the Application, as well as the relevant communication equipment. When updating iOS or Android operating systems, the Application may become incompatible with the updated version of these operating systems, either losing its functionality completely or partially. Similarly, if the User does not update the operating system as it is updated by the App Store, the Application (in its current supported version for the updated operating system) may become incompatible with the outdated version of the operating system on the User's mobile device. These circumstances are beyond the control and responsibility of the Rights Holder; however, the Rights Holder will make efforts to restore the functionality of the Application. When the User accesses the Internet through a mobile network, the rates and charges of the User's network provider or roaming apply for sending and receiving messages, data, etc. The User is responsible for tracking such rates and charges imposed by the relevant mobile operator and bears all associated expenses.
+
+
+5. Confidentiality
+5.1. Using the Application does not necessarily require the User to create an account (i.e., provide User data, create access credentials such as a login and password). However, the functional capabilities of the Application may be limited in such cases.
+5.2. The User gives consent to the Rights Holder for the processing of their personal data for the purpose of providing Services to the User. The processing of User data by the Rights Holder is carried out in accordance with the "Privacy Policy and Personal Data Protection for Users of the mobile application 'InMind!'," posted at the address: https://www.ignatmorozov.ru/#/inmind/private_policy, solely for the purpose of the User's use of the Application as intended.
+5.3. The User is solely responsible to third parties for their actions when using the Application, including ensuring compliance with applicable laws and not infringing upon the rights and legitimate interests of third parties. The User agrees to independently and at their own expense settle any claims from third parties related to the User's actions when using the Application.
+5.4. The User must ensure the confidentiality of the data stored in their account, including their password, and is responsible for any disclosure of such data through any means, including all associated risks and losses. Disclosure of account data constitutes a material breach of this Agreement.
+5.5. The User is responsible for all actions taken under their account, using their login and password, as well as for all actions taken from their mobile device on which the Application is used.
+
+6. Liability
+6.1. The Application is provided "as is." The Rights Holder cannot provide guarantees regarding error-free and uninterrupted operation of the Application or its individual components and/or functions on your mobile device. However, we strive to improve the quality of our Applications. The Rights Holder also cannot guarantee the Application's fitness for specific User purposes, accuracy, completeness, and timeliness of information obtained by the User. The Rights Holder does not provide any other warranties, except as expressly specified in this Agreement.
+6.2. The Rights Holder is not responsible for: the consequences of unauthorized use of the Application by third parties; direct or indirect damages incurred by the User as a result of using/not using the Application.
+6.3. All actions taken using the Application are considered to be actions taken by the User.
+6.4. The Rights Holder has the right to deny the User Services without prior notice if the User's actions insult, demean, threaten, defame, or otherwise violate the rights of third parties, or breach applicable laws.
+6.5. The Rights Holder is not responsible for the accuracy of data entered by the User when paying for services from third parties, as well as the accuracy of transactions between participants in settlements (banks, mobile operators, payment agents, etc.).
+6.6. The User has the right to address the Rights Holder with any questions or claims related to the use/inability to use the Application, as well as possible violations of laws and/or third-party rights (contact information provided below).
+6.7. This Agreement and all relationships related to the use of the Application are governed by applicable laws.
+
+7. Updates/New Versions of the Application
+7.1. The terms of this Agreement apply to all subsequent updates/new versions (successive releases) of the Application. By agreeing to install an update/new version of the Application, the User also accepts the terms of this Agreement for the corresponding updates/new versions of the Application if the update (installation of the new version) of the Application is not accompanied by a different agreement.
+
+8. Changes to the Terms
+8.1. The Rights Holder may unilaterally amend this Agreement. Notice to the User regarding any changes to the terms of this Agreement will be published on the Internet at: https://www.ignatmorozov.ru/#/inmind/terms_of_use. The specified changes to the terms of the Agreement become effective from the date of their publication on the Internet at: https://www.ignatmorozov.ru/#/inmind/terms_of_use, unless a different procedure for their entry into force is provided.
+
+9. Contact Information
+9.1. We welcome your comments or questions. All messages should be directed to the email address: ignat-morozov-pub@outlook.com.

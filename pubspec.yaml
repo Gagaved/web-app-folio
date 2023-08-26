@@ -29,6 +29,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/private_policy.txt
+    - assets/terms_of_use.txt
     - assets/avatar.png
     - assets/in_mind_logo.png
     - assets/google_fonts/

@@ -43,17 +43,17 @@ class _TopBar extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       color: Colors.black12,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
+      child: const Padding(
+        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/private_policy');
-              },
-              child: const Text('Private Policy'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, '/inmind/private_policy');
+            //   },
+            //   child: const Text('Private Policy'),
+            // ),
           ],
         ),
       ),
@@ -163,7 +163,7 @@ class _InMindAppCard extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     bool descriptionIsVisible = true;
     double width = 300;
-    double height = 300.0; // Adjust this threshold as needed
+    double height = 400.0; // Adjust this threshold as needed
     if (screenHeight < height) {
       descriptionIsVisible = false;
     }
@@ -224,10 +224,43 @@ class _InMindAppCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.fromLTRB(15.0,15,15,0),
                 child: SizedBox(
                     width: 150, child: Image.asset('assets/google_play_img.png')),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(15,5,15,10),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/inmind/private_policy');
+                        },
+                        child: const Text(
+                          "private policy",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 16,
+                          ),
+                        ),),
+                      const Text(' and '),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/inmind/terms_of_use');
+                        },
+                        child: const Text(
+                          "terms of use",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 16,
+                          ),
+                        ),),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ));
