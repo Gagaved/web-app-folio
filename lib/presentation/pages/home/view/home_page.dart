@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webappfolio/l10n/gen_l10n/app_localizations.dart';
 import 'package:webappfolio/presentation/widgets/app_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -87,13 +88,12 @@ class AdaptiveProfileCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   if (nameIsVisible)
-                    Text(
-                      'Ignat Morozov',
+                    Text(AppLocalizations.of(context)!.titleName,
                       style: TextStyle(fontSize: nameFontSize),
                     ),
                   if (descriptionIsVisible)
                     Text(
-                      "Welcome to my website! Here, you'll find a collection of all the applications crafted by my hands, each one a testament to my dedication and creativity. Explore this digital portfolio and immerse yourself in the world of my creations.",
+                      AppLocalizations.of(context)!.homeWelcome,
                       style: TextStyle(fontSize: descriptionFontSize),
                     ),
                 ],
@@ -115,12 +115,12 @@ class _AppsList extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
-            "My apps",
+            AppLocalizations.of(context)!.myApps,
             style: Theme.of(context).textTheme.headlineLarge,
           ),
         ),
         const _InMindAppCard(),
-      ],
+        const SizedBox(height: 100,),],
     );
   }
 }
@@ -132,24 +132,14 @@ class _InMindAppCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
-    bool descriptionIsVisible = true;
     double width = 300;
     double height = 400.0; // Adjust this threshold as needed
     if (screenHeight < height) {
-      descriptionIsVisible = false;
     }
-    double logoSize;
-    double maxAvatarSize = 50.0;
-    double minAvatarSize = 25.0;
     if (screenWidth < 600 || screenHeight < 200) {
-      logoSize = minAvatarSize;
-      descriptionIsVisible = false;
       //width = 300;
     } else {
-      logoSize = maxAvatarSize;
     }
-    double nameFontSize = 23.0;
-    double descriptionFontSize = 18.0;
     return Card(
         elevation: 10,
         color: Theme.of(context).colorScheme.surface,
@@ -190,7 +180,7 @@ class _InMindAppCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
                 child: Text(
-                  "InMind! is an app for practicing mental calculations, designed to enhance mathematical thinking skills. It offers tasks of varying difficulty, timed practice options, and error analysis for more effective learning.",
+                  AppLocalizations.of(context)!.inMindDescription,
                   textAlign: TextAlign.justify,
                   style: Theme.of(context).textTheme.labelLarge,
                   overflow: TextOverflow.fade,
@@ -213,28 +203,27 @@ class _InMindAppCard extends StatelessWidget {
                           Navigator.pushNamed(
                               context, '/inmind/private_policy');
                         },
-                        child: const Text(
-                          "private policy",
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                      const Text(' and '),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, '/inmind/terms_of_use');
-                        },
-                        child: const Text(
-                          "terms of use",
-                          style: TextStyle(
+                        child: Text(
+                          AppLocalizations.of(context)!.privatePolicy,
+                          style: const TextStyle(
                             color: Colors.blue,
                             fontSize: 16,
                           ),
                         ),
                       ),
                     ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/inmind/terms_of_use');
+                },
+                child: Text(
+                  AppLocalizations.of(context)!.useOfTerms,
+                  style: const TextStyle(
+                    color: Colors.blue,
+                    fontSize: 16,
                   ),
                 ),
               ),

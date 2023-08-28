@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:webappfolio/l10n/gen_l10n/app_localizations.dart';
 import 'package:webappfolio/presentation/widgets/app_bar.dart';
 import 'package:webappfolio/presentation/widgets/clickable_text.dart';
 
@@ -14,7 +15,7 @@ Future<void> launchInBrowser(Uri url) async {
 }
 
 class _Delimiter extends StatelessWidget {
-  const _Delimiter({super.key});
+  const _Delimiter();
 
   @override
   Widget build(BuildContext context) {
@@ -27,18 +28,20 @@ class _Delimiter extends StatelessWidget {
 
 class Highlighter extends StatelessWidget {
   const Highlighter({super.key, this.child});
+
   final Widget? child;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Container(
-         decoration: BoxDecoration(
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(00),
-
-        color: Theme.of(context).highlightColor,),
-          child: child,
+          color: Theme.of(context).highlightColor,
         ),
+        child: child,
+      ),
     );
   }
 }
@@ -53,27 +56,26 @@ class ResumePage extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: const AppTopBar(),
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Container(
-            width: 700,
-            child: const Column(
-              children: [
-                Highlighter(child: _Title()),
-                _Delimiter(),
-                Highlighter(child: _LanguageAndFrameworks()),
-                _Delimiter(),
-                Highlighter(child: _Projects()),
-                _Delimiter(),
-                Highlighter(child: _Experience()),
-                _Delimiter(),
-                Highlighter(child: _WorkWith()),
-                _Delimiter(),
-                Highlighter(child: _Education()),
-                _Delimiter(),
-                Highlighter(child: _SoftSkills()),
-              ],
-            ),
+      body: Center(
+        child: SizedBox(
+          width: 700,
+          child: ListView(
+            shrinkWrap: true,
+            children: const [
+              Highlighter(child: _Title()),
+              _Delimiter(),
+              Highlighter(child: _LanguageAndFrameworks()),
+              _Delimiter(),
+              Highlighter(child: _Projects()),
+              _Delimiter(),
+              Highlighter(child: _Experience()),
+              _Delimiter(),
+              Highlighter(child: _WorkWith()),
+              _Delimiter(),
+              Highlighter(child: _Education()),
+              _Delimiter(),
+              Highlighter(child: _SoftSkills()),
+            ],
           ),
         ),
       ),
@@ -91,37 +93,35 @@ class _Title extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Морозов Игнат',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          Text(
+            AppLocalizations.of(context)!.titleName,
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
           Row(
             children: [
-              const Text('telegram: '),
+              Text(AppLocalizations.of(context)!.titleTelegram),
               ClickableText(
                 text: '@Gagaved',
                 onTap: () {
                   Clipboard.setData(const ClipboardData(text: '@Gagaved'));
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                        content: Text('Telegram скопирован в буфер обмена')),
-                  );
+                  launchInBrowser(Uri.parse('https://t.me/Gagaved'));
                 },
               ),
             ],
           ),
           Row(
             children: [
-              const Text("email: "),
+              Text(AppLocalizations.of(context)!.titleEmail),
               ClickableText(
                 text: 'Gagaved@hotmail.com',
                 onTap: () {
                   Clipboard.setData(
                       const ClipboardData(text: 'Gagaved@hotmail.com'));
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                        content: Text('Email скопирован в буфер обмена')),
+                    SnackBar(
+                        content: Text(AppLocalizations.of(context)!
+                            .titleCopiedToClipboard)),
                   );
                 },
               ),
@@ -129,7 +129,7 @@ class _Title extends StatelessWidget {
           ),
           Row(
             children: [
-              const Text('Github: '),
+              Text(AppLocalizations.of(context)!.titleGithub),
               ClickableText(
                 text: 'https://github.com/Gagaved',
                 onTap: () async {
@@ -155,25 +155,22 @@ class _LanguageAndFrameworks extends StatelessWidget {
     return Container(
       alignment: Alignment.centerLeft,
       padding: const EdgeInsets.all(20.0),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Языки и фреймворки',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            AppLocalizations.of(context)!.languageAndFrameworksTitle,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
-            'Знаю, могу и хочу писать на следующих языках: Dart, kotlin, C, python. C++',
+            AppLocalizations.of(context)!.languageAndFrameworksLanguages,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
+          Text(AppLocalizations.of(context)!.languageAndFrameworksFrameworks),
+          const SizedBox(height: 10),
           Text(
-            'С чем я работал: Flutter, Android NDK, Git, FastApi, Cuda',
-          ),
-          SizedBox(height: 10),
-          Text(
-            'Менее уверенно, но знаю основы этих языков: Js, C#',
-          ),
+              AppLocalizations.of(context)!.languageAndFrameworksLessConfident),
         ],
       ),
     );
@@ -185,54 +182,72 @@ class _Projects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Container(
       padding: const EdgeInsets.all(20.0),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Проекты',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            AppLocalizations.of(context)!.projectsTitle,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 20,),
           _Project(
-            year: '2021',
-            title: 'Фитнес трекер на Android NDK',
-            description: 'Разработал фитнес трекер на платформе Android NDK.',
-            link: 'Ссылка', // Замените на реальную ссылку
-          ),
+              year: '2023',
+              title: localizations.projectTitle1,
+              description: localizations.projectDescription1,
+              link: localizations.projectLink),
+          const SizedBox(height: 10),
           _Project(
-            year: '2021',
-            title: 'Приложение для швейной фабрики на Android NDK',
-            description:
-                'Участвовал в командной разработке приложения для швейной фабрики на Android NDK. Этот проект был выполнен в рамках курсового проекта.',
-            link: 'Ссылка', // Замените на реальную ссылку
+            year: '2023',
+            title: localizations.projectTitle2,
+            description: localizations.projectDescription2,
+            link: localizations.projectLink,
+            onTap: () {
+              launchInBrowser(
+                  Uri.parse("https://github.com/Gagaved/web-app-folio"));
+            },
           ),
+          const SizedBox(height: 10),
+          _Project(
+            year: '2023',
+            title: localizations.projectTitle3,
+            description: localizations.projectDescription3,
+            link: localizations.projectLink,
+            onTap: () {
+              launchInBrowser(Uri.parse(
+                  "https://github.com/Gagaved/gas_distribution_station_model"));
+            },
+          ),
+          const SizedBox(height: 10),
           _Project(
             year: '2022',
-            title:
-                'MVP приложение для бронирования мест в офисе. Plug-in ATB и FEFU.',
-            description:
-                'Разработали командой из 4 человек клиент-серверное MVP-приложение для бронирования рабочих мест в офисе банка.',
-            link: 'Ссылка', // Замените на реальную ссылку
+            title: localizations.projectTitle4,
+            description: localizations.projectDescription4,
+            link: localizations.projectLink,
+            onTap: () {
+              launchInBrowser(
+                  Uri.parse("https://github.com/Gagaved/Atb-booking"));
+            },
           ),
+          const SizedBox(height: 10),
           _Project(
-            year: '2023',
-            title:
-            'Приложение для инженерной школы FEFU',
-            description:
-            'Разработал Flutter windows приложение для тренажер-симулятор для инженерной школы FEFU, имитирующий работу газораспределительной станции, с возможностью проводить гидравлический расчет по схеме',
-            link: 'Ссылка', // Замените на реальную ссылку
-          ),
+              year: '2021',
+              title: localizations.projectTitle5,
+              description: localizations.projectDescription5,
+              link: ''),
+          const SizedBox(height: 10),
           _Project(
-            year: '2023',
-            title:
-            'Разработка собственного сайта',
-            description:
-            'Веду разработку Flutter web приложения для своего сайта. www.ignatmorozov.ru',
-            link: 'Ссылка', // Замените на реальную ссылку
+            year: '2021',
+            title: localizations.projectTitle6,
+            description: localizations.projectDescription6,
+            link: localizations.projectLink,
+            onTap: () {
+              launchInBrowser(Uri.parse(
+                  "https://github.com/Gagaved/fefu-android-base-repo"));
+            },
           ),
-          // Добавьте остальные проекты по аналогии
         ],
       ),
     );
@@ -244,12 +259,14 @@ class _Project extends StatelessWidget {
   final String title;
   final String description;
   final String link;
+  final VoidCallback? onTap;
 
   const _Project({
     required this.year,
     required this.title,
     required this.description,
     required this.link,
+    this.onTap,
     Key? key,
   }) : super(key: key);
 
@@ -267,10 +284,14 @@ class _Project extends StatelessWidget {
           onTap: () {
             // Откройте ссылку на проект с использованием url_launcher
           },
-          child: Text(
-            link,
-            style: const TextStyle(
-                color: Colors.blue, decoration: TextDecoration.underline),
+          child: GestureDetector(
+            onTap: onTap,
+            child: Text(
+              link,
+              style: const TextStyle(
+                color: Colors.blue,
+              ),
+            ),
           ),
         ),
         const SizedBox(height: 10),
@@ -278,46 +299,31 @@ class _Project extends StatelessWidget {
     );
   }
 }
+
 class _Experience extends StatelessWidget {
   const _Experience({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var localizations = AppLocalizations.of(context)!;
     return Container(
       alignment: Alignment.centerLeft,
       padding: const EdgeInsets.all(20.0),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Опыт',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            AppLocalizations.of(context)!.experienceTitle,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 20),
-          _ExperienceItem(
-            text: 'На Dart + Flutter пишу уже около 1.5 лет.',
-          ),
-          _ExperienceItem(
-            text: 'Понимаю, как работает механизм рендеринга Flutter, Diffing Algorithm Widget tree, Element tree, Render tree.',
-          ),
-          _ExperienceItem(
-            text: 'Знаю зачем нужны global key, value key, unique key.',
-          ),
-          _ExperienceItem(
-            text: 'Понимаю как работает "многопоточность" Dart\'а Isolate, Future, async/await.',
-          ),
-          _ExperienceItem(
-            text: 'Понимаю концепцию наследования в Dart, Extensions, Mixins и т.д.',
-          ),
-          _ExperienceItem(
-            text: 'Свободно ориентируюсь в языке и фреймворке. Знаком с принципами REST, SOLID, с архитектурными паттернами MVVM MVC, обладаю навыками объектно-ориентированного программирования, понимаю концепции классов, объектов, наследования, инкапсуляции и полиморфизма.',
-          ),
-          _ExperienceItem(
-            text: 'Знаю алгоритмы и структуры данных: сортировки, поиски, списки, стеки и очереди и т.д.',
-          ),
-          _ExperienceItem(
-            text: 'Понимаю принципы чистой архитектуры: разделение на слои, зависимости и инверсию управления.',
-          ),
+          const SizedBox(height: 20),
+          _ExperienceItem(text: localizations.experienceDartFlutter),
+          _ExperienceItem(text: localizations.experienceRenderingMechanism),
+          _ExperienceItem(text: localizations.experienceKeys),
+          _ExperienceItem(text: localizations.experienceAsync),
+          _ExperienceItem(text: localizations.experienceOop),
+          _ExperienceItem(text: localizations.experienceAlgorithms),
+          _ExperienceItem(text: localizations.experienceCleanArchitecture),
         ],
       ),
     );
@@ -344,59 +350,60 @@ class _ExperienceItem extends StatelessWidget {
   }
 }
 
-
 class _WorkWith extends StatelessWidget {
   const _WorkWith({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Container(
       alignment: Alignment.centerLeft,
       padding: const EdgeInsets.all(20.0),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'С чем работал',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            localizations.workWithTitle,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           _WorkWithItem(
-            title: 'Стейтменеджмент',
+            title: localizations.workWithItemStateManagement,
             items: [
-              'Bloc',
-              'Небольшой опыт работы с Riverpod (этот сайт)',
+              localizations.workWithItemStateManagementSubItem1,
+              localizations.workWithItemStateManagementSubItem2,
             ],
           ),
           _WorkWithItem(
-            title: 'Базы данных',
+            title: localizations.workWithItemDatabases,
             items: [
-              'Работал с Drift',
-              'Небольшой опыт работы с Floor',
+              localizations.workWithItemDatabasesSubItem1,
+              localizations.workWithItemDatabasesSubItem2,
             ],
           ),
           _WorkWithItem(
-            title: 'Аутентификация',
+            title: localizations.workWithItemAuthentication,
             items: [
-              'Интегрировал Firebase OAuth и Google Sign-In в собственное приложение',
+              localizations.workWithItemAuthenticationSubItem,
             ],
           ),
           _WorkWithItem(
-            title: 'Локализация',
+            title: localizations.workWithItemLocalization,
             items: [
-              'Применение intl в собственных проектах',
+              localizations.workWithItemLocalizationSubItem,
             ],
           ),
           _WorkWithItem(
-            title: 'DI (Dependency Injection)',
+            title: localizations.workWithItemDi,
             items: [
-              'Использование getIt в собственных проектах',
+              localizations.workWithItemDiSubItem,
             ],
           ),
           _WorkWithItem(
-            title: 'REST',
+            title: localizations.workWithItemRest,
             items: [
-              'Работал с библиотекой Dio для HTTP-запросов',
+              localizations.workWithItemRestSubItem,
             ],
           ),
         ],
@@ -439,19 +446,21 @@ class _Education extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Container(
       alignment: Alignment.centerLeft,
       padding: const EdgeInsets.all(20.0),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Образование',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            localizations.educationTitle,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
-            'Учусь в ДВФУ на 4 курсе по специальности «Прикладная математика и информатика»',
+            localizations.educationInfo,
           ),
         ],
       ),
@@ -464,21 +473,26 @@ class _SoftSkills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Container(
       padding: const EdgeInsets.all(20.0),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Soft skills',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            localizations.softSkillsTitle,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
-            'Я очень открытый и коммуникативный человек, легко могу найти общий язык с любым человеком. Достаточно терпелив, для меня нет никакой трудности несколько раз объяснять человеку какую-нибудь тему, пока он не поймет =)',
+            localizations.softSkillsCommunicative,
           ),
           Text(
-            'Способен самоорганизовываться и организовывать других.',
+            localizations.softSkillsPatient,
+          ),
+          Text(
+            localizations.softSkillsSelfOrganized,
           ),
         ],
       ),

@@ -7,7 +7,7 @@ class BlogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const AppTopBar(),),
+      appBar: AppBar(title: const AppTopBar(),  automaticallyImplyLeading: false,),
       body: const Center(child: Text('Blog page. work in progress'),),
     );
   }

@@ -1,7 +1,9 @@
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:webappfolio/l10n/gen_l10n/app_localizations.dart';
 import 'package:webappfolio/presentation/app/app.dart';
+import 'package:webappfolio/presentation/widgets/language_picker.dart';
 
 class AppTopBar extends StatelessWidget {
   const AppTopBar({super.key});
@@ -18,6 +20,8 @@ class AppTopBar extends StatelessWidget {
           _BlogButton(),
           _MyGamesButton(),
           Spacer(),
+          LanguagePicker(),
+          SizedBox(width: 10,),
           _ThemeModeSwitcher()
         ],
       ),
@@ -26,7 +30,7 @@ class AppTopBar extends StatelessWidget {
 }
 
 class _ResumeButton extends StatelessWidget {
-  const _ResumeButton({super.key});
+  const _ResumeButton();
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +53,13 @@ class _ResumeButton extends StatelessWidget {
           },
         ),
       ),
-      child: const Text('Resume'),
+      child: Text(AppLocalizations.of(context)!.topBarResume),
     );
   }
 }
 
 class _BlogButton extends StatelessWidget {
-  const _BlogButton({super.key});
+  const _BlogButton();
 
   @override
   Widget build(BuildContext context) {
@@ -78,13 +82,13 @@ class _BlogButton extends StatelessWidget {
           },
         ),
       ),
-      child: const Text('Blog'),
+      child: Text(AppLocalizations.of(context)!.topBarBlog),
     );
   }
 }
 
 class _HomeButton extends StatelessWidget {
-  const _HomeButton({super.key});
+  const _HomeButton();
 
   @override
   Widget build(BuildContext context) {
@@ -107,13 +111,13 @@ class _HomeButton extends StatelessWidget {
           },
         ),
       ),
-      child: const Text('Home'),
+      child: Text(AppLocalizations.of(context)!.topBarHome),
     );
   }
 }
 
 class _MyGamesButton extends StatelessWidget {
-  const _MyGamesButton({super.key});
+  const _MyGamesButton();
 
   @override
   Widget build(BuildContext context) {
@@ -136,8 +140,8 @@ class _MyGamesButton extends StatelessWidget {
           },
         ),
       ),
-      child: const Text(
-        'Games',
+      child: Text(
+        AppLocalizations.of(context)!.topBarGames,
       ),
     );
   }
