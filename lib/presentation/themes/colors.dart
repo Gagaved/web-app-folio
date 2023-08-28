@@ -25,7 +25,8 @@ class AppColors {
   static const Color darkSurfaceColor = Color(0xFF3A2D46);
   static const Color onDarkSurfaceColor = Color(0xFFF4EFFF);
 
-  static const Color highlightColor = Color(0xFFF0DAFF);
+  static const Color darkHighlightColor = Color(0x5C183FF);
+  static const Color highlightColor =  Color(0x51FFFFFF);
   static const Color hoverColor = Color(0xFFF0DAFF);
   static const Color focusColor = Color(0xFFF0DAFF);
   static const Color splashColor = Color(0xFFF0DAFF);

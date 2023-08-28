@@ -1,22 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
 <!--    <base href="$FLUTTER_BASE_HREF" />-->
-    <base href="/" />
-
+    <base href="/">
     <meta charset="UTF-8" />
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
     <meta name="description" content="Ignat Morozov website" />
@@ -25,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="example" />
-    <link rel="apple-touch-icon" href="https://www.ignatmorozov.ru/icons/Icon-192.png" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="icons/Icon-192.png" />
@@ -33,13 +19,15 @@
     <title></title>
     <link rel="stylesheet" href="splash/style.css" />
     <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="splash/style.css" class="light-theme" />
+    <link rel="stylesheet" href="splash/style-dark.css" class="dark-theme" />
   </head>
   <body>
     <div id="preloader" class="preloader-container">
       <div class="animation">
         <div class="player">
           <lottie-player
-            src="https://www.ignatmorozov.ru/splash/splash.json"
+            src="splash/splash.json"
             background="transparent"
             speed="1"
             style="width: 400px; height: 400px"

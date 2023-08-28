@@ -92,19 +92,6 @@ class TaskStyle extends ThemeExtension<TaskStyle> {
 class AppThemeDataHolder {
   static ThemeData appThemeData = ThemeData(
      fontFamily: GoogleFonts.roboto().fontFamily,
-      extensions: const <ThemeExtension<dynamic>>[
-        TaskStyle(
-          correctOnPrimary: AppColors.correctOnPrimaryColor,
-          wrongOnPrimary: AppColors.wrongOnPrimaryColor,
-          correctColor: AppColors.correctGreenColor,
-          wrongColor: AppColors.wrongRedColor,
-          unknownColor: Colors.grey,
-        ),
-        ScienceStyle(
-            scienceColor: AppColors.scienceColor,
-            scienceBackgroundColor: AppColors.scienceBackgroundColor,
-            scienceTintBackgroundColor: AppColors.scienceTintBackgroundColor)
-      ],
       useMaterial3: true,
       scaffoldBackgroundColor: AppColors.backgroundColor,
       highlightColor: AppColors.highlightColor,
@@ -163,22 +150,9 @@ class AppThemeDataHolder {
   static final ThemeData appDarkThemeData = ThemeData(
       inputDecorationTheme: const InputDecorationTheme(
           hintStyle: TextStyle(color: AppColors.onDarkSurfaceColor)),
-      extensions: const <ThemeExtension<dynamic>>[
-        TaskStyle(
-          correctOnPrimary: AppColors.darkCorrectOnPrimaryGreenColor,
-          wrongOnPrimary: AppColors.darkWrongOnPrimaryRedColor,
-          correctColor: AppColors.darkCorrectGreenColor,
-          wrongColor: AppColors.darkWrongRedColor,
-          unknownColor: Colors.grey,
-        ),
-        ScienceStyle(
-            scienceColor: AppColors.darkScienceColor,
-            scienceBackgroundColor: AppColors.darkScienceBackgroundColor,
-            scienceTintBackgroundColor:
-                AppColors.darkScienceTintBackgroundColor)
-      ],
       useMaterial3: true,
       scaffoldBackgroundColor: AppColors.darkBackgroundColor,
+      highlightColor: AppColors.darkHighlightColor,
       cardTheme: const CardTheme(
         surfaceTintColor: Colors.transparent,
         color: AppColors.darkSurfaceColor,

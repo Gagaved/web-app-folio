@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webappfolio/presentation/widgets/app_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,54 +7,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [
-            Colors.transparent,
-            Theme.of(context).colorScheme.secondary,
-          ],
-        )),
-        child: const SingleChildScrollView(
-          child: Column(
-            children: [
-              _TopBar(),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0),
-                child: AdaptiveProfileCard(),
-              ),
-              _AppsList()
-            ],
-          ),
-        ),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const AppTopBar(),
       ),
-    );
-  }
-}
-
-class _TopBar extends StatelessWidget {
-  const _TopBar();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      color: Colors.black12,
-      child: const Padding(
-        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+      body: const SingleChildScrollView(
+        child: Column(
           children: [
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.pushNamed(context, '/inmind/private_policy');
-            //   },
-            //   child: const Text('Private Policy'),
-            // ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10.0),
+              child: AdaptiveProfileCard(),
+            ),
+            _AppsList()
           ],
         ),
       ),
@@ -100,7 +65,13 @@ class AdaptiveProfileCard extends StatelessWidget {
               width: avatarSize,
               height: avatarSize,
               decoration: const BoxDecoration(
-                boxShadow: [BoxShadow(color: Colors.black26,offset: Offset(1, 1),blurRadius: 5,spreadRadius: 5)],
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black26,
+                      offset: Offset(1, 1),
+                      blurRadius: 5,
+                      spreadRadius: 5)
+                ],
                 image: DecorationImage(image: AssetImage("assets/avatar.png")),
                 shape: BoxShape.circle,
               ),
@@ -190,7 +161,8 @@ class _InMindAppCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -215,7 +187,8 @@ class _InMindAppCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
                 child: Text(
                   "InMind! is an app for practicing mental calculations, designed to enhance mathematical thinking skills. It offers tasks of varying difficulty, timed practice options, and error analysis for more effective learning.",
                   textAlign: TextAlign.justify,
@@ -224,19 +197,21 @@ class _InMindAppCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(15.0,15,15,0),
+                padding: const EdgeInsets.fromLTRB(15.0, 15, 15, 0),
                 child: SizedBox(
-                    width: 150, child: Image.asset('assets/google_play_img.png')),
+                    width: 150,
+                    child: Image.asset('assets/google_play_img.png')),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(15,5,15,10),
+                padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/inmind/private_policy');
+                          Navigator.pushNamed(
+                              context, '/inmind/private_policy');
                         },
                         child: const Text(
                           "private policy",
@@ -244,7 +219,8 @@ class _InMindAppCard extends StatelessWidget {
                             color: Colors.blue,
                             fontSize: 16,
                           ),
-                        ),),
+                        ),
+                      ),
                       const Text(' and '),
                       GestureDetector(
                         onTap: () {
@@ -256,7 +232,8 @@ class _InMindAppCard extends StatelessWidget {
                             color: Colors.blue,
                             fontSize: 16,
                           ),
-                        ),),
+                        ),
+                      ),
                     ],
                   ),
                 ),
