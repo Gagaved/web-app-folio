@@ -17,8 +17,8 @@ class AppTopBar extends StatelessWidget {
         children: [
           _HomeButton(),
           _ResumeButton(),
-          _BlogButton(),
-          _MyGamesButton(),
+          //_BlogButton(),
+          //_MyGamesButton(),
           Spacer(),
           LanguagePicker(),
           SizedBox(width: 10,),
