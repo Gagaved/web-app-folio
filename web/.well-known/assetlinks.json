@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ru.ignatmorozov.inmind",
+      "sha256_cert_fingerprints": [
+        "C0:10:39:15:38:59:80:70:54:F9:90:3B:FD:DD:A9:C9:06:84:B1:D4:AF:6E:80:3B:D5:5A:90:81:B1:EC:D9:0E"
+      ]
+    }
+  }
+]
