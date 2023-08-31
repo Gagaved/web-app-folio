@@ -56,7 +56,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get languageAndFrameworksLanguages => 'Знаю, могу и хочу писать на следующих языках: Dart, Kotlin, Python. C++';
 
   @override
-  String get languageAndFrameworksFrameworks => 'С чем я работал: Flutter, Android NDK, Git, Firebase, FastApi, Cuda';
+  String get languageAndFrameworksFrameworks => 'С чем я работал: Flutter, Android NDK, Git, Firebase auth, FastApi, Cuda';
 
   @override
   String get languageAndFrameworksLessConfident => 'Менее уверенно, но знаю основы этих языков: Js, C#';
@@ -125,10 +125,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get experienceAsync => 'Понимаю как работает \"многопоточность\" Dart, Isolate, Future, async/await.';
 
   @override
-  String get experienceOop => 'Свободно ориентируюсь в языке и фреймворке. Знаком с принципами REST, SOLID, с архитектурными паттернами MVVM MVC, обладаю навыками объектно-ориентированного программирования, понимаю концепции классов, объектов, наследования, инкапсуляции и полиморфизма.';
+  String get experienceOop => 'Хорошо ориентируюсь в языке и фреймворке. Знаком с принципами REST, SOLID, с архитектурными паттернами MVVM MVC, обладаю навыками объектно-ориентированного программирования, понимаю концепции классов, объектов, наследования, инкапсуляции и полиморфизма.';
 
   @override
-  String get experienceAlgorithms => 'Знаю алгоритмы и структуры данных: сортировки, поиски, списки, стеки и очереди и т.д.';
+  String get experienceAlgorithms => 'Отлично знаю алгоритмы и структуры данных: сортировки, поиски, хэш-таблицы, деревья, стеки, очереди и т.д.';
 
   @override
   String get experienceCleanArchitecture => 'Понимаю принципы чистой архитектуры: разделение на слои, зависимости и инверсию управления.';

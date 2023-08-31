@@ -188,13 +188,18 @@ class _Projects extends StatelessWidget {
               year: '2023',
               title: localizations.projectTitle1,
               description: localizations.projectDescription1,
-              link: localizations.projectLink),
+              link: "Play Market ${localizations.projectLink}",
+    onTap: () {
+    launchInBrowser(
+    Uri.parse("https://play.google.com/store/apps/details?id=ru.ignatmorozov.inmind"));
+    },
+          ),
           const SizedBox(height: 10),
           _Project(
             year: '2023',
             title: localizations.projectTitle2,
             description: localizations.projectDescription2,
-            link: localizations.projectLink,
+            link: 'Github rep. ${localizations.projectLink}',
             onTap: () {
               launchInBrowser(
                   Uri.parse("https://github.com/Gagaved/web-app-folio"));
@@ -205,7 +210,7 @@ class _Projects extends StatelessWidget {
             year: '2023',
             title: localizations.projectTitle3,
             description: localizations.projectDescription3,
-            link: localizations.projectLink,
+            link: 'Github rep. ${localizations.projectLink}',
             onTap: () {
               launchInBrowser(Uri.parse(
                   "https://github.com/Gagaved/gas_distribution_station_model"));
@@ -216,7 +221,7 @@ class _Projects extends StatelessWidget {
             year: '2022',
             title: localizations.projectTitle4,
             description: localizations.projectDescription4,
-            link: localizations.projectLink,
+            link: 'Github rep. '+localizations.projectLink,
             onTap: () {
               launchInBrowser(
                   Uri.parse("https://github.com/Gagaved/Atb-booking"));
@@ -233,7 +238,7 @@ class _Projects extends StatelessWidget {
             year: '2021',
             title: localizations.projectTitle6,
             description: localizations.projectDescription6,
-            link: localizations.projectLink,
+            link: 'Github rep. ${localizations.projectLink}',
             onTap: () {
               launchInBrowser(Uri.parse(
                   "https://github.com/Gagaved/fefu-android-base-repo"));
