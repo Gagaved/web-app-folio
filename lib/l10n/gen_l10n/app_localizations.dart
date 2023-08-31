@@ -321,6 +321,12 @@ abstract class AppLocalizations {
   /// **'I understand how Flutter\'s rendering mechanism works, including Diffing Algorithm Widget tree, Element tree, Render tree.'**
   String get experienceRenderingMechanism;
 
+  /// No description provided for @experiencePlayMarket.
+  ///
+  /// In en, this message translates to:
+  /// **'I independently published the application on the Play Market and I am familiar with the entire publication pipeline.'**
+  String get experiencePlayMarket;
+
   /// No description provided for @experienceKeys.
   ///
   /// In en, this message translates to:
@@ -336,7 +342,7 @@ abstract class AppLocalizations {
   /// No description provided for @experienceOop.
   ///
   /// In en, this message translates to:
-  /// **'I\'m comfortable with the language and framework. Familiar with REST, SOLID principles, MVVM MVC architectural patterns, and have object-oriented programming skills.'**
+  /// **'I\'m comfortable with the language and framework. Familiar with REST, SOLID, KISS, DRY, principles, MVVM MVC architectural patterns, and have object-oriented programming skills.'**
   String get experienceOop;
 
   /// No description provided for @experienceAlgorithms.

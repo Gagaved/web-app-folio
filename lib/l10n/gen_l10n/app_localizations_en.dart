@@ -119,13 +119,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get experienceRenderingMechanism => 'I understand how Flutter\'s rendering mechanism works, including Diffing Algorithm Widget tree, Element tree, Render tree.';
 
   @override
+  String get experiencePlayMarket => 'I independently published the application on the Play Market and I am familiar with the entire publication pipeline.';
+
+  @override
   String get experienceKeys => 'I know the purpose of global key, value key, unique key.';
 
   @override
   String get experienceAsync => 'I understand Dart\'s concurrency mechanisms: Isolate, Future, async/await.';
 
   @override
-  String get experienceOop => 'I\'m comfortable with the language and framework. Familiar with REST, SOLID principles, MVVM MVC architectural patterns, and have object-oriented programming skills.';
+  String get experienceOop => 'I\'m comfortable with the language and framework. Familiar with REST, SOLID, KISS, DRY, principles, MVVM MVC architectural patterns, and have object-oriented programming skills.';
 
   @override
   String get experienceAlgorithms => 'I know algorithms and data structures: sorting, searching, lists, stacks, queues, etc.';

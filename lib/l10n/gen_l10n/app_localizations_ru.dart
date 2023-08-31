@@ -119,13 +119,16 @@ class AppLocalizationsRu extends AppLocalizations {
   String get experienceRenderingMechanism => 'Понимаю, как работает механизм рендеринга Flutter, Diffing Algorithm Widget tree, Element tree, Render tree.';
 
   @override
+  String get experiencePlayMarket => 'Самостоятельно публикавал приложение в PlayMarket, знаю весь pipeline публикации.';
+
+  @override
   String get experienceKeys => 'Знаю зачем нужны global key, value key, unique key.';
 
   @override
   String get experienceAsync => 'Понимаю как работает \"многопоточность\" Dart, Isolate, Future, async/await.';
 
   @override
-  String get experienceOop => 'Хорошо ориентируюсь в языке и фреймворке. Знаком с принципами REST, SOLID, с архитектурными паттернами MVVM MVC, обладаю навыками объектно-ориентированного программирования, понимаю концепции классов, объектов, наследования, инкапсуляции и полиморфизма.';
+  String get experienceOop => 'Хорошо ориентируюсь в языке и фреймворке. Знаком с принципами REST, SOLID, KISS, DRY, с архитектурными паттернами MVVM MVC, обладаю навыками объектно-ориентированного программирования, понимаю концепции классов, объектов, наследования, инкапсуляции и полиморфизма.';
 
   @override
   String get experienceAlgorithms => 'Отлично знаю алгоритмы и структуры данных: сортировки, поиски, хэш-таблицы, деревья, стеки, очереди и т.д.';

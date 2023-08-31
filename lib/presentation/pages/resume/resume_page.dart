@@ -314,6 +314,7 @@ class _Experience extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           _ExperienceItem(text: localizations.experienceDartFlutter),
+          _ExperienceItem(text: localizations.experiencePlayMarket),
           _ExperienceItem(text: localizations.experienceRenderingMechanism),
           _ExperienceItem(text: localizations.experienceKeys),
           _ExperienceItem(text: localizations.experienceAsync),
