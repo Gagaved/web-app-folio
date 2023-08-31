@@ -2,18 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webappfolio/l10n/gen_l10n/app_localizations.dart';
+import 'package:webappfolio/presentation/utils/launch_url.dart';
 import 'package:webappfolio/presentation/widgets/app_bar.dart';
 import 'package:webappfolio/presentation/widgets/clickable_text.dart';
-
-Future<void> launchInBrowser(Uri url) async {
-  if (!await launchUrl(
-    url,
-    mode: LaunchMode.externalApplication,
-  )) {
-    // throw Exception('Could not launch $url');
-  }
-}
-
 class _Delimiter extends StatelessWidget {
   const _Delimiter();
 

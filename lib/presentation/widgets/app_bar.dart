@@ -16,6 +16,7 @@ class AppTopBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           _HomeButton(),
+          SizedBox(width: 10,),
           _ResumeButton(),
           //_BlogButton(),
           //_MyGamesButton(),

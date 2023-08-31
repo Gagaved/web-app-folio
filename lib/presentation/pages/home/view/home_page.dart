@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webappfolio/l10n/gen_l10n/app_localizations.dart';
+import 'package:webappfolio/presentation/utils/launch_url.dart';
 import 'package:webappfolio/presentation/widgets/app_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -88,7 +89,8 @@ class AdaptiveProfileCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   if (nameIsVisible)
-                    Text(AppLocalizations.of(context)!.titleName,
+                    Text(
+                      AppLocalizations.of(context)!.titleName,
                       style: TextStyle(fontSize: nameFontSize),
                     ),
                   if (descriptionIsVisible)
@@ -120,7 +122,10 @@ class _AppsList extends StatelessWidget {
           ),
         ),
         const _InMindAppCard(),
-        const SizedBox(height: 100,),],
+        const SizedBox(
+          height: 100,
+        ),
+      ],
     );
   }
 }
@@ -134,12 +139,10 @@ class _InMindAppCard extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double width = 300;
     double height = 400.0; // Adjust this threshold as needed
-    if (screenHeight < height) {
-    }
+    if (screenHeight < height) {}
     if (screenWidth < 600 || screenHeight < 200) {
       //width = 300;
-    } else {
-    }
+    } else {}
     return Card(
         elevation: 10,
         color: Theme.of(context).colorScheme.surface,
@@ -188,12 +191,16 @@ class _InMindAppCard extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(15.0, 15, 15, 0),
-                child: SizedBox(
-                    width: 150,
-                    child: Image.asset('assets/google_play_img.png')),
+                child: GestureDetector(
+                  onTap: () => launchInBrowser(Uri.parse(
+                      'https://play.google.com/store/apps/details?id=ru.ignatmorozov.inmind')),
+                  child: SizedBox(
+                      width: 150,
+                      child: Image.asset('assets/google_play_img.png')),
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
+                padding: const EdgeInsets.fromLTRB(15, 5, 15, 5),
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -215,15 +222,18 @@ class _InMindAppCard extends StatelessWidget {
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/inmind/terms_of_use');
-                },
-                child: Text(
-                  AppLocalizations.of(context)!.useOfTerms,
-                  style: const TextStyle(
-                    color: Colors.blue,
-                    fontSize: 16,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(15, 0, 15, 5),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/inmind/terms_of_use');
+                  },
+                  child: Text(
+                    AppLocalizations.of(context)!.useOfTerms,
+                    style: const TextStyle(
+                      color: Colors.blue,
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               ),
